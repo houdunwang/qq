@@ -9,9 +9,9 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\qq;
 
-use hdphp\kernel\ServiceProvider;
+use houdunwang\framework\build\Provider;
 
-class QqProvider extends ServiceProvider {
+class QqProvider extends Provider {
 
 	//延迟加载
 	public $defer = true;
@@ -21,7 +21,7 @@ class QqProvider extends ServiceProvider {
 
 	public function register() {
 		$this->app->single( 'Qq', function () {
-			return new Qq( c( 'qq' ) );
+			return new Qq();
 		} );
 	}
 }

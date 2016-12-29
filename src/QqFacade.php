@@ -9,9 +9,9 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\qq;
 
-use hdphp\kernel\ServiceFacade;
+use houdunwang\framework\build\Facade;
 
-class QqFacade extends ServiceFacade {
+class QqFacade extends Facade {
 	public static function getFacadeAccessor() {
 		return 'Qq';
 	}
